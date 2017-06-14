@@ -1,0 +1,5 @@
+.container {
+  background-image: url('./images/home_slide_image1.jpg');
+  min-height: 800px;
+  width: 100%;
+}

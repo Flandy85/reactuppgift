@@ -1,0 +1,36 @@
+.about-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 15px;
+	width: 100%;
+}
+
+.about-placement-container {
+	background-color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.8;
+	width: 50%;
+}
+.about-title {
+	color: #00000f;
+	font-family: 'Mogra', cursive;
+	font-size: 40px;
+	text-align: center;
+}
+.fun-title, .joke-title{
+	font-size: 20px;
+	text-align: center;
+}
+p {
+	font-size: 18px;
+}
+.img-toaster {
+	width: 40vw;
+	height: 38vh;
+}
