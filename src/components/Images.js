@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/images.css';
+// Component for displaying photos from Flickr.
 class Images extends React.Component{
 
   constructor(){
@@ -12,7 +13,7 @@ class Images extends React.Component{
   }
 
   render() {
-
+    // Api code block extends into Search.js
     let photoStream;
 
     if(this.state.mounted){
@@ -28,7 +29,7 @@ class Images extends React.Component{
               <a href={source} target={source} className="image-size">
                 <img src={source} alt={title} className="photo-image"/>
               </a> 
-              <p className="photo-title">Title: {title}</p> 
+              <p className="photo-title" >Title: {title}</p> 
             </div>
            
           );

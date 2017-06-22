@@ -1,11 +1,14 @@
 import React from 'react';  
 import DisplayButton from './DisplayButton';
 import './css/search.css';
+// Component for handling search function for Flickr photos
 class Search extends React.Component{
-  // fda49c8cb3942dab1d64780f08ed71fe
+  // Rest of the Api codeblock call.
+  // Function using fetch method
   handleSubmit(e){
     e.preventDefault();
-    let apiKey = 'dd19ed51d6cdbcda479e49d09494285a';
+    this.props.loading();
+    let apiKey = 'cbbd48e2830e6787ff24a776d11985ba';
     let searchTerm = this.refs.photoKeyword.value;
     this.refs.photoKeyword.value = '';
 
@@ -25,7 +28,11 @@ class Search extends React.Component{
         throw error;
       });
   }
+  // Function for toggling button on/off for photo titles
+  toggleButton() {
+    
 
+  }
   render(){
     return (
       <div className="search-container">
@@ -45,7 +52,7 @@ class Search extends React.Component{
           </form>
           <div className="search-field-button">
             <p>Display photo title</p>
-            <DisplayButton />
+            <DisplayButton toggleButton={this.toggleButton}/>
           </div>
          
         </div>

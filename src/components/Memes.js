@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/memes.css';
-
+// Component for displaying memes linked in from external site
 const Header = () => (
   <div className="meme-container">
   	<div className="meme-flex-container">

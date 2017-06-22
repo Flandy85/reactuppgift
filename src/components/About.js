@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/About.css';
-
+// About component that handles information/data about
 class About extends React.Component {
   
   render() {

@@ -49,3 +49,11 @@
   font-size: 12px;
   height: 26px;
 }
+.defloading {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+.defaultSpinner {
+  align-self: center;
+}

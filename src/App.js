@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+// Import BrowserRouter function from react to navigate between pages
 import {
   BrowserRouter,
   Route
@@ -15,20 +15,21 @@ import './App.css';
 class App extends Component {
   
   render() {
+    // Object sending down values to Header js with spread method
     let titles = {
       title: "Photo Gallery",
       secondTitle: "and MEMES!"
     }
     return (
       <BrowserRouter>
-      <div className="container">
-        <Header {...titles} />
-      
-        <Route exact path="/" component={Start} />
-        <Route path="/about" component={About} />
-        <Route path="/memes" component={Memes} />
-          
-      </div>
+        <div className="container">
+          <Header {...titles} />
+        
+          <Route exact path="/" component={Start} />
+          <Route path="/about" component={About} />
+          <Route path="/memes" component={Memes} />
+            
+        </div>
       </BrowserRouter>
         
     );

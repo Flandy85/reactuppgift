@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+// Button component for displaying title on photos
 class DisplayButton extends React.Component {
 
   constructor() {
@@ -9,20 +8,29 @@ class DisplayButton extends React.Component {
       isOn: false,
     };
   }
-
+  // Function for button displaying photo title
   change() {
     this.setState({
       isOn: !this.state.isOn,
+
     });
+    this.props.toggleButton();
+    console.log('Testing');
+
+    let display = (this.state.isOn) ? "block" : "none";
+    let displayTitle = [...document.querySelectorAll('.photo-title')];
+
+    displayTitle.map((i) => {
+      return i.style.display = display;
+    })
   }
-
-
   
   render() {
-
-    let text = (this.state.isOn) ? "ON" : "OFF";
-    let color = (this.state.isOn) ? "green" : "gray";
-
+    // Color and text for button
+    let text = (this.state.isOn) ? "OFF" : "ON";
+    let color = (this.state.isOn) ? "gray" : "green";
+    
+    // Object containing css for display photo button
     let buttonStyle = {
       border: 'none',
       backgroundColor: color,
